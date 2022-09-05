@@ -107,14 +107,14 @@ jobs:
       - run:
           name: run frontend scan
           command: |
-            # cd frontend
-            # npm install
-            # #npm install oauth-sign@^0.9.0
-            # npm audit fix --audit-level=critical --force
-            # npm audit --audit-level=critical
             cd frontend
-            npm install --package-lock-only
-            npm audit fix --force
+            npm install
+            # #npm install oauth-sign@^0.9.0
+            npm audit fix --audit-level=critical --force
+            npm audit --audit-level=critical
+            # cd frontend
+            # npm install --package-lock-only
+            # npm audit fix --force
 
   scan-backend:
     docker:
@@ -126,13 +126,13 @@ jobs:
       - run:
           name: run backend scan
           command: |
-            # cd backend
-            # npm install
-            # #npm install oauth-sign@^0.9.0
-            # npm audit fix --force
-            # npm audit --audit-level=critical
             cd backend
-            npm audit fix --package-lock-only --force
+            npm install
+            # #npm install oauth-sign@^0.9.0
+            npm audit fix --force
+            npm audit --audit-level=critical
+            # cd backend
+            # npm audit fix --package-lock-only --force
 
 workflows:
   default:
