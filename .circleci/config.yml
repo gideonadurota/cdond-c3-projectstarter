@@ -239,7 +239,8 @@ jobs:
             sudo apt-get -y install tar gzip 
             curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
             unzip awscliv2.zip
-            sudo ./aws/install  
+            sudo ./aws/install 
+
       - run:
           name: Get backend url
           command: |
@@ -270,7 +271,7 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-          fingerprints: ["24:9e:99:22:83:89:83:03:0f:df:9c:3e:d7:7c:9a:4a"]
+          fingerprints: ["8e:31:13:41:21:03:d9:dd:01:e5:d4:c5:25:38:9c:49"]
       - attach_workspace: 
          at: ~/
       - run:
